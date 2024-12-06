@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background-grey {
+    background-color: rgb(223, 228, 230);
+    height: 100%;
+}
+
+header {
+    background-color: #182029;
+    padding-top: 20px;
+}
+
+.nav-1 {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #37475A
+}
+
+.nav-1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 0px 10px;
+}
+
+#logo {
+    padding-left: 25px;
+    width: 150px;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#gift {
+    background-color: chocolate;
+    text-align: center;
+    margin: 25px 0px;
+    padding: 5px;
+}
+
+#gift p {
+    color: white;
+}
+
+#holiday {
+    text-align: center;
+    color: white;
+    background-image: url(/Esercitazione\ 2/assets/bg-image.png);
+}
+
+#container-white {
+    background-color: white;
+    margin-top: 15px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.titoli span {
+    color: darkcyan;
+    font-weight: 600;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+}
+
+.immagini-4 {
+    border-radius: 8%;
+    width: 20%;
+    height: 200px;
+    padding: 10px;
+}
+
+#container-img {
+display:inline-block;
+width: 100%;
+}
+
+.img-slide {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.titoli-1 span {
+    color: darkcyan;
+    font-weight: 600;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+}
+
+.titoli-1 {
+    text-align: center;
+}
+
+.nav-2 {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #37475A;
+    text-align: center;
+}
+
+.nav-2 u {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    background-color: #182029;
+    padding: 60px;
+}
+
+#logo-2 {
+    width: 150px;
+    padding-left: 550px;
+}
