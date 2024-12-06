@@ -94,5 +94,9 @@ object-fit: cover;
 }
 
 li {
-    padding: 5px;
+    padding-top: 10px;
+}
+
+ul {
+    margin: 0% 10%;
 }
