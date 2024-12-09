@@ -119,3 +119,29 @@ footer {
     width: 150px;
     padding-left: 550px;
 }
+
+.sezione-extra div{
+    margin-top: 40px;
+    display: inline-block;
+    width: 20%;
+}
+
+.gaming img {
+    width: 120px;
+    padding-top: 15px;
+}
+
+.comfy-style img {
+    width: 120px;
+    padding-top: 15px;
+}
+
+.holiday-gift img {
+    width: 120px;
+    padding-top: 15px;
+}
+
+.add-joy img {
+    width: 120px;
+    padding-top: 15px;
+}
