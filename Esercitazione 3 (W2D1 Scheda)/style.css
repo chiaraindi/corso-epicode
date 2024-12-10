@@ -8,9 +8,10 @@
     padding: 20px;
     position: absolute;
     right: 20px;
-    top: 70px;
-    display: none;
+    top: -30px;
     cursor: pointer;
+    transition: top 1s ease;
+    opacity: 0;
 }
 
 .card-container {
@@ -20,12 +21,17 @@
 }
 
 .card-container img {
-width: 100%;
-height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .card-container:hover .save-button {
-    display: block;
+    top: 70px;
+    opacity: 1;
+}
+
+.button-card-container {
+    position: relative;
 }
 
 .link-button {
@@ -39,10 +45,6 @@ height: 100%;
     bottom: 30px;
     left: 30px;
     cursor: pointer;
-}
-
-.button-container {
-    position: relative;
 }
 
 .upload-button {
@@ -71,4 +73,33 @@ height: 100%;
     right: 50px;
     opacity: 0.8;
     cursor: pointer;
+}
+
+.link-button,
+.upload-button,
+.options-button {
+    opacity: 0; 
+    transition: bottom 1s ease, opacity 0.5s ease; 
+}
+
+.link-button {
+    bottom: 0;
+    left: 30px;
+}
+
+.upload-button {
+    bottom: 0;
+    right: 110px;
+}
+
+.options-button {
+    bottom: 0;
+    right: 50px;
+}
+
+.card-container:hover .link-button,
+.card-container:hover .upload-button,
+.card-container:hover .options-button {
+    bottom: 30px;
+    opacity: 1; 
 }
