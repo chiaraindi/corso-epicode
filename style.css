@@ -1,0 +1,26 @@
+.save-button {
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    border: none;
+    border-radius: 45px;
+    padding: 20px;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    display: none;
+}
+
+.card-container {
+    position: relative;
+    width: 400px;
+}
+
+.card-container img {
+width: 100%;
+}
+
+.card-container:hover .save-button {
+    display: block;
+}
