@@ -14,8 +14,8 @@
     margin-left: 30px;
     margin-right: 30px;
     align-items: center;
-    border-bottom: solid 3px;
-    border-color: rgb(206, 202, 202);
+    border-bottom: solid 10px;
+    border-color: rgb(243, 241, 241);
     padding-bottom: 30px;
 }
 
@@ -32,14 +32,16 @@
     border-radius: 15px;
     width: 150px;
     height: 30px;
+    background-color: white;
+    border-color: grey;
 }
 
 .btn-user {
     color: white;
     background-color: red;
     border-radius: 50px;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border: none;
     font-size: 20px;
 }
@@ -57,7 +59,8 @@
 
 aside {
     width: 40%;
-    background-color: blue;
+    border-left: solid 3px;
+    border-color: rgb(206, 202, 202);
 }
 
 main {
@@ -71,6 +74,7 @@ main {
     border-bottom: solid 3px;
     border-color: rgb(206, 202, 202);
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .following {
@@ -150,3 +154,57 @@ main {
     align-items: center;
     padding-top: 50px;
 }
+
+.content-up-aside {
+    margin-left: 150px;
+    margin-right: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: solid 3px;
+    border-color: rgb(206, 202, 202);
+}
+
+.mt-icons {
+    display: flex;
+    align-items: center;
+}
+
+.mt-icons img {
+    width: 30px;
+}
+
+.mt-icons p {
+    color: rgb(167, 164, 164);
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.p1 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.connect-btn img {
+    width: 30px;
+}
+
+.connect-btn {
+    background-color: transparent;
+    border-radius: 20px;
+    border-color: rgb(167, 164, 164);
+    padding: 8px;
+    width: 200px;
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.p2 {
+    margin: 25px;
+    font-size: 15px;
+    color: grey;
+}
+
+
