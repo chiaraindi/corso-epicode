@@ -292,6 +292,8 @@ main {
     margin-right: 100px;
     margin-left: 100px;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .saved-content-box {
@@ -311,4 +313,24 @@ main {
 
 .title-saved-article:hover {
     text-decoration: underline;
+}
+
+.see-all p {
+    color: green;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.footer {
+    color: rgb(167, 164, 164);
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.footer p {
+    padding-right: 30px;
+    padding-top: 15px;
 }
