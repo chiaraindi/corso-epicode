@@ -4,7 +4,16 @@
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* let numero1=42;
+let numero2=40;
+
+if (numero1 > numero2) {
+  console.log("Il numero più grande è " + numero1);
+} else if (numero2>numero1) {
+  console.log("Il numero più grande è " + numero2)
+} else {
+  console.log("I numeri sono uguali")
+} */
 
 /*
 ESERCIZIO 2
