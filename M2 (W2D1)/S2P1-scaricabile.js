@@ -26,7 +26,20 @@ ESERCIZIO 2
   num >= 20 - mostra in console "Huge"
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* let num = 5;
+
+if (num < 5) {
+  console.log("Tiny");
+} else if (num < 10) {
+  console.log("Small")
+} else if (num < 15) {
+  console.log("Medium")
+} else if (num < 20) {
+  console.log("Large")
+} else if (num >=20) {
+  console.log("Huge")
+}
+*/
 
 //ESERCIZI SUI CICLI: 
 
@@ -34,7 +47,9 @@ ESERCIZIO 2
   Mostra i numeri da 0 a 10 (incluso) in ordine ascendente, ma evitando di mostrare i numeri 3 e 8 (suggerimento: ripassa l'uso di "continue").
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+
+
+
 
 /* ESERCIZIO 11
   Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare the il valore corrente sia pari o dispari, e mostrare il risultato in console.
