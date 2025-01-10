@@ -55,12 +55,18 @@ if (num < 5) {
 } 
 */
 
-
 /* ESERCIZIO 11
-  Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare the il valore corrente sia pari o dispari, e mostrare il risultato in console.
+  Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare che il valore corrente sia pari o dispari, e mostrare il risultato in console.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* for (let i = 0; i <= 15; i++) {
+  if (i % 2 === 0) {
+    console.log(i + " è un numero pari");
+  } else {
+    console.log(i + " è un numero dispari")
+  }
+}
+*/
 
 //ESERCIZI EXTRA NON OBBLIGATORI
 
