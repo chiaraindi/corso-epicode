@@ -40,7 +40,17 @@ console.log(reverseString("epicode")) */
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function upperFirst(stringa) {
+    let arrayParole = stringa.split(" ")
+    /*console.log(arrayParole) */
+    let stringa2="";
+for (let i=0; i < arrayParole.length; i++) {
+    //console.log(arrayParole[i][0].toUpperCase() + arrayParole[i].slice(1, arrayParole[i].length))
+    stringa2+= arrayParole[i][0].toUpperCase() + arrayParole[i].slice(1, arrayParole[i].length)+" "
+}
+console.log (stringa2)
+}
+upperFirst("mi chiamo chiara")
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
