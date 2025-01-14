@@ -3,20 +3,28 @@
  La funzione deve ritornare la somma di quei due valori, ma se il loro valore è lo stesso allora deve ritornare la loro somma moltiplicata per 3.
 */
 
-function crazySum(num1, num2) {
+/* function crazySum(num1, num2) {
     if (num1 === num2) {
         return (num1 + num2) * 3;
     } else
         return (num1 + num2);
 }
 
-console.log(crazySum(4,5))
+console.log(crazySum(4,5)) */
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "boundary", che accetta un numero intero come parametro e ritorna true se tale parametro è incluso tra 20 e 100 (incluso) o se è esattamente uguale a 400.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function boundary(num) {
+    if ((num >= 20 && num <=100) || num === 400) {
+        return "true";
+    } else {
+        return "false"
+    }
+}
+
+console.log(boundary(19))
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
