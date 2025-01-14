@@ -16,21 +16,25 @@ console.log(crazySum(4,5)) */
  Scrivi una funzione chiamata "boundary", che accetta un numero intero come parametro e ritorna true se tale parametro è incluso tra 20 e 100 (incluso) o se è esattamente uguale a 400.
 */
 
-function boundary(num) {
+/* function boundary(num) {
     if ((num >= 20 && num <=100) || num === 400) {
         return "true";
     } else {
         return "false"
     }
-}
+} 
 
-console.log(boundary(19))
+console.log(boundary(19)) */
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* function reverseString(stringa) {
+    return stringa.split("").reverse().join("");
+}
+
+console.log(reverseString("epicode")) */
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
