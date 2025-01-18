@@ -1,147 +1,113 @@
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-.background-grey {
-    background-color: rgb(223, 228, 230);
-    height: 100%;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #182029;
-    padding-top: 20px;
-}
-
-.nav-1 {
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #37475A
-}
-
-.nav-1 a {
+    background-color: blue;
     color: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 4px solid grey;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Stili per la tabella */
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: blue;
+    color: white;
+}
+
+thead th {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+tbody td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Stili per immagini nella tabella */
+table img {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+/* Stili per i link */
+a {
+    color: blue;
     text-decoration: none;
-    font-size: 20px;
-    font-weight: 300;
-    padding: 0px 10px;
 }
 
-#logo {
-    padding-left: 25px;
-    width: 150px;
+a:hover {
+    text-decoration: underline;
 }
 
-main {
-    width: 90%;
-    margin: 0 auto;
-}
-
-#gift {
-    background-color: chocolate;
+/* Sezione dei commenti */
+section {
+    width: 80%;
+    margin: 30px auto;
     text-align: center;
-    margin: 25px 0px;
-    padding: 5px;
 }
 
-#gift p {
-    color: white;
-}
-
-#holiday {
-    text-align: center;
-    color: white;
-    background-image: url(/Esercitazione\ 2\ \(W1D2\ amazon\)/assets/bg-image.png)
-}
-
-#container-white {
-    background-color: white;
-    margin-top: 15px;
-    padding-top: 10px;
+textarea {
     width: 100%;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+    resize: vertical;
 }
 
-.titoli span {
-    color: darkcyan;
-    font-weight: 600;
-    padding: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: smaller;
-}
-
-.immagini-4 {
-    border-radius: 8%;
-    width: 20%;
-    height: 200px;
-    padding: 10px;
-}
-
-#container-img {
-display:inline-block;
-width: 100%;
-}
-
-.img-slide {
-    width: 100%;
-    padding-top: 20px;
-}
-
-.titoli-1 span {
-    color: darkcyan;
-    font-weight: 600;
-    padding: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: smaller;
-}
-
-.titoli-1 {
-    text-align: center;
-}
-
-.nav-2 {
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #37475A;
-    text-align: center;
-}
-
-.nav-2 u {
-    text-decoration: none;
+button {
+    margin-top: 1rem;
+    background-color:blue;
     color: white;
+    border: none;
+    padding: 7px 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+button:hover {
+    background-color: #45a049;
+}
+
+/* Stile per il footer */
 footer {
-    background-color: #182029;
-    padding: 60px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
 }
 
-#logo-2 {
-    width: 150px;
-    padding-left: 550px;
-}
-
-.sezione-extra div{
-    margin-top: 40px;
-    display: inline-block;
-    width: 20%;
-}
-
-.gaming img {
-    width: 120px;
-    padding-top: 15px;
-}
-
-.comfy-style img {
-    width: 120px;
-    padding-top: 15px;
-}
-
-.holiday-gift img {
-    width: 120px;
-    padding-top: 15px;
-}
-
-.add-joy img {
-    width: 120px;
-    padding-top: 15px;
+footer p {
+    margin: 7px.5rem 0;
 }
