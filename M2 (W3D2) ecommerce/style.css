@@ -111,3 +111,15 @@ footer {
 footer p {
     margin: 7px.5rem 0;
 }
+
+/*Stile aggiunto con js */
+.amazon-link {
+    color: rgb(255, 42, 0);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*Stile aggiunto per esercizio 11 */
+.hidden {
+    display: none;
+}
