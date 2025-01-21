@@ -33,7 +33,6 @@ function cambiaColorePrezzi() {
     const colori = ['red', 'blue', 'green', 'orange', 'purple']; // Array di colori disponibili
 
     prezzi.forEach(prezzo => {
-        // Genera un colore casuale dall'array
         const coloreCasuale = colori[Math.floor(Math.random() * colori.length)];
         prezzo.style.color = coloreCasuale;
     });
