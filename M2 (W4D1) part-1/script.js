@@ -86,7 +86,7 @@ const jobs = [
   },
 ]
 
-//creare una funzione che cercherà per posizione lavorativa E posizione geografica
+//creare una funzione che cerca per posizione lavorativa E posizione geografica
 function cercaLavori(cercaPerPosizione, cercaPerLuogo) {
   if (!cercaPerPosizione || !cercaPerLuogo) {
     return {
