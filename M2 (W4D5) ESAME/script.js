@@ -133,7 +133,7 @@ function aggiornaRisultati(listaLavori) {
 
   if (listaLavori.count === 0) {
     const messaggio = document.createElement("p");
-    messaggio.textContent = "Nessun risultato trovato.";
+    messaggio.textContent = "Nessun risultato trovato. Cerca un'altra località.";
     risultatiContainer.appendChild(messaggio);
     return;
   }

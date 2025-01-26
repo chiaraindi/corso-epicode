@@ -5,24 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ricerca Lavori</title>
   <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <nav>
-        <img id="logo" src="https://s36300.pcdn.co/wp-content/uploads/logo-infojobs.png" alt="logo-infojobs">
-    </nav>
-  <h1>Entra in contatto con 2.000 nuove offerte ogni giorno</h1>
-  <h3>Cerca il lavoro dei tuoi sogni nella tua città!</h3>
-  <label for="posizione">Posizione lavorativa:</label>
-  <input type="text" id="posizione" placeholder="Inserisci la posizione lavorativa">
-  
-  <label for="luogo">Posizione geografica:</label>
-  <input type="text" id="luogo" placeholder="Inserisci il luogo">
+    <div id="contenitore-ricerca">
+        <h1>Entra in contatto con 2.000 nuove offerte ogni giorno</h1>
+        <h3>Cerca il lavoro dei tuoi sogni nella tua città!</h3>
+        <label for="posizione">Posizione lavorativa:</label>
+        <input type="text" id="posizione" placeholder="Inserisci la posizione lavorativa">
+        
+        <label for="luogo">Posizione geografica:</label>
+        <input type="text" id="luogo" placeholder="Inserisci la città, regione o stato">
 
-  <button id="cerca-btn">Trova il tuo lavoro</button>
+        <button id="cerca-btn">Trova il tuo lavoro</button>
 
-  <h2>Abbiamo trovato per te:</h2>
-  <ul id="risultati"></ul>
+        <h2>Abbiamo trovato per te:</h2>
+        <ul id="risultati"></ul>
+    </div>
 
   <script src="script.js"></script>
 </body>
