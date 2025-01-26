@@ -97,15 +97,15 @@ function cercaLavori(cercaPerPosizione, cercaPerLuogo) {
 
   const offerteTrovate = [];
   
-  //iterare tutti gli annunci
+  //itera tutti gli annunci
   for (let i = 0; i < jobs.length; i++) {
     const job = jobs[i];
 
-    //rendere tutto minuscolo
+    //rende tutto minuscolo
     const titolo = job.title.toLowerCase();
     const luogo = job.location.toLowerCase();
 
-    //verificare corrispondenza
+    //verifica corrispondenza
     if (titolo.includes(cercaPerPosizione.toLowerCase()) &&
         luogo.includes(cercaPerLuogo.toLowerCase())) {
       offerteTrovate.push(job);
@@ -121,3 +121,47 @@ function cercaLavori(cercaPerPosizione, cercaPerLuogo) {
 //test
 const risultato = cercaLavori("work", "lnd");
 console.log(risultato);
+
+//parte 2
+const inputPosizione = document.getElementById("posizione");
+const inputLuogo = document.getElementById("luogo");
+const bottoneCerca = document.getElementById("cerca-btn");
+const risultatiContainer = document.getElementById("risultati");
+
+function aggiornaRisultati(listaLavori) {
+  risultatiContainer.innerHTML = "";
+
+  if (listaLavori.count === 0) {
+    const messaggio = document.createElement("p");
+    messaggio.textContent = "Nessun risultato trovato.";
+    risultatiContainer.appendChild(messaggio);
+    return;
+  }
+
+  //lista dei risultati
+  const ul = document.createElement("ul");
+  for (let i = 0; i < listaLavori.result.length; i++) {
+    const lavoro = listaLavori.result[i];
+    const li = document.createElement("li");
+    li.textContent = `${lavoro.title} - ${lavoro.location}`;
+    ul.appendChild(li);
+  }
+  risultatiContainer.appendChild(ul);
+}
+
+//evento click sul pulsante "cerca"
+bottoneCerca.addEventListener("click", function () {
+  const posizioneInserita = inputPosizione.value;
+  const luogoInserito = inputLuogo.value;
+
+  //test
+  console.log("Valore posizione inserita:", posizioneInserita);
+  console.log("Valore luogo inserito:", luogoInserito);
+
+  const risultato = cercaLavori(posizioneInserita, luogoInserito);
+
+  //test
+  console.log("Risultato della ricerca:", risultato);
+
+  aggiornaRisultati(risultato);
+});
