@@ -96,7 +96,7 @@ function cercaLavori(cercaPerPosizione, cercaPerLuogo) {
   }
 
   const offerteTrovate = [];
-  
+
   //itera tutti gli annunci
   for (let i = 0; i < jobs.length; i++) {
     const job = jobs[i];
@@ -107,7 +107,7 @@ function cercaLavori(cercaPerPosizione, cercaPerLuogo) {
 
     //verifica corrispondenza
     if (titolo.includes(cercaPerPosizione.toLowerCase()) &&
-        luogo.includes(cercaPerLuogo.toLowerCase())) {
+      luogo.includes(cercaPerLuogo.toLowerCase())) {
       offerteTrovate.push(job);
     }
   }
@@ -154,13 +154,13 @@ bottoneCerca.addEventListener("click", function () {
   const posizioneInserita = inputPosizione.value;
   const luogoInserito = inputLuogo.value;
 
-  //test
+//test
   console.log("Valore posizione inserita:", posizioneInserita);
   console.log("Valore luogo inserito:", luogoInserito);
 
   const risultato = cercaLavori(posizioneInserita, luogoInserito);
 
-  //test
+//test
   console.log("Risultato della ricerca:", risultato);
 
   aggiornaRisultati(risultato);
