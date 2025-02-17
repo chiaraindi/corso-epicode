@@ -6,15 +6,17 @@
     <title>Amazon Prime</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg">
-        <div class="container">
+        <div class="container d-flex align-items-center justify-content-between">
             <!-- Logo -->
             <a class="navbar-brand" href="#">
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/Amazon-Prime-Video-Symbol.png" alt="Logo Agenzia Viaggi" width="100" height="auto">
-              </a>
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/Amazon-Prime-Video-Symbol.png" 
+                     alt="Logo Prime Video" width="100" height="auto">
+            </a>
 
             <!-- Bottone per menu mobile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -22,27 +24,82 @@
             </button>
 
             <!-- Link del menu -->
-            <div class="collapse navbar-collapse d-flex align-items-center gap-3">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#store">Store</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#channels">Channels</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#categories">Categories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#my-stuff">My Stuff</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#store">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#channels">Channels</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#my-stuff">My Stuff</a></li>
                 </ul>
+            </div>
+
+            <!-- Icone destra -->
+            <div class="d-flex align-items-center">
+                <a href="#" class="text-white me-3">
+                    <i class="fas fa-search fa-lg"></i>
+                </a>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <a href="#" class="text-white">
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" 
+                         alt="User" width="40" height="40" class="rounded-circle"/>
+                </a>
             </div>
         </div>
     </nav>
+<!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/070cf3f8754f3f23fb040035e0178413de3fae16037bfa19e9d8a45ecaa2d322.jpg" class="d-block w-100" alt="First slide">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://www.businesspeople.it/wp-content/uploads/2023/03/Prime-Video-supera-Netflix-Stati-Uniti_slider_home.jpg.webp" class="d-block w-100" alt="Second slide">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://static2.iodonna.it/wp-content/uploads/2019/12/the-report-amazon-prime-video-_TTR_01308_slider.jpg?v=1350869" class="d-block w-100" alt="Third slide">
+      </div>
+  
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
 
+    
+
+    <script src="https://kit.fontawesome.com/949dd7b04c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        // Inizializza Swiper
+        var swiper = new Swiper('.swiper', {
+          loop: true,           // Carosello che cicla
+          autoplay: {           // Abilita l'autoplay
+            delay: 1500,        // Cambia immagine ogni 2.5 secondi
+          },
+          pagination: {         // Abilita la paginazione
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {         // Abilita i bottoni di navigazione
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          scrollbar: {          // Abilita la scrollbar
+            el: '.swiper-scrollbar',
+          },
+        });
+      </script>
 </body>
 </html>
