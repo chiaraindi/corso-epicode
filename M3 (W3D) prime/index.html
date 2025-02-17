@@ -49,33 +49,87 @@
             </div>
         </div>
     </nav>
-<!-- Slider main container -->
-<div class="swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">
-        <img src="https://m.media-amazon.com/images/S/pv-target-images/070cf3f8754f3f23fb040035e0178413de3fae16037bfa19e9d8a45ecaa2d322.jpg" class="d-block w-100" alt="First slide">
-      </div>
-      <div class="swiper-slide">
-        <img src="https://www.businesspeople.it/wp-content/uploads/2023/03/Prime-Video-supera-Netflix-Stati-Uniti_slider_home.jpg.webp" class="d-block w-100" alt="Second slide">
-      </div>
-      <div class="swiper-slide">
-        <img src="https://static2.iodonna.it/wp-content/uploads/2019/12/the-report-amazon-prime-video-_TTR_01308_slider.jpg?v=1350869" class="d-block w-100" alt="Third slide">
-      </div>
-  
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-  
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
-  </div>
 
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="https://m.media-amazon.com/images/S/pv-target-images/070cf3f8754f3f23fb040035e0178413de3fae16037bfa19e9d8a45ecaa2d322.jpg" class="d-block w-100" alt="First slide">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://www.businesspeople.it/wp-content/uploads/2023/03/Prime-Video-supera-Netflix-Stati-Uniti_slider_home.jpg.webp" class="d-block w-100" alt="Second slide">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://static2.iodonna.it/wp-content/uploads/2019/12/the-report-amazon-prime-video-_TTR_01308_slider.jpg?v=1350869" class="d-block w-100" alt="Third slide">
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <div class="container my-5">
+        <!-- Prima Row: Titolo e Link -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <h2>Amazon Originals and Exclusives</h2>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="text-white">See more</a>
+            </div>
+        </div>
     
+        <!-- Seconda Row: Carosello di Cards -->
+        <div class="row">
+            <div class="col-12">
+                <!-- Inizia il carosello -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Card 1 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Card image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card 1</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Card image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card 2</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Card image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card 3</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Paginazione e Navigazione -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://kit.fontawesome.com/949dd7b04c.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -83,23 +137,23 @@
 
     <script>
         // Inizializza Swiper
-        var swiper = new Swiper('.swiper', {
-          loop: true,           // Carosello che cicla
-          autoplay: {           // Abilita l'autoplay
-            delay: 1500,        // Cambia immagine ogni 2.5 secondi
-          },
-          pagination: {         // Abilita la paginazione
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {         // Abilita i bottoni di navigazione
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          scrollbar: {          // Abilita la scrollbar
-            el: '.swiper-scrollbar',
-          },
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,           // Carosello che cicla
+            autoplay: {           // Abilita l'autoplay
+                delay: 1500,      // Cambia immagine ogni 1.5 secondi
+            },
+            pagination: {         // Abilita la paginazione
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {         // Abilita i bottoni di navigazione
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {          // Abilita la scrollbar
+                el: '.swiper-scrollbar',
+            },
         });
-      </script>
+    </script>
 </body>
 </html>
