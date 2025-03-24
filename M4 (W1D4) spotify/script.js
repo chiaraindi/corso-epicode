@@ -1,51 +1,66 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const API_URLS = {
-      eminem: "https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem",
-      metallica: "https://striveschool-api.herokuapp.com/api/deezer/search?q=metallica",
-      queen: "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
-    };
-  
-    function fetchSongs(artist, sectionId) {
-      fetch(API_URLS[artist])
-        .then(response => response.json())
-        .then(data => {
-          console.log(`Dati ricevuti per ${artist}:`, data); // Log per debug
-          if (data.data) {
-            updateSongs(data.data, sectionId);
-          } else {
-            console.error(`Formato dati non valido per ${artist}`, data);
-          }
-        })
-        .catch(error => console.error(`Errore nel recupero dati per ${artist}:`, error));
+document.addEventListener("DOMContentLoaded", () => {
+  const searchField = document.getElementById("searchField");
+  const searchButton = document.getElementById("button-search");
+  const searchResults = document.getElementById("searchResults");
+  const resultsContainer = document.querySelector(".imgLinks");
+
+  // Funzione per mostrare il loader
+  const showLoader = () => {
+    searchResults.style.display = "block";
+    resultsContainer.innerHTML = `
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    `;
+  };
+
+  // Funzione per cercare canzoni
+  const searchSongs = async () => {
+    const query = searchField.value.trim();
+    if (!query) return;
+    
+    showLoader(); // Mostra il loader mentre carica
+    
+    try {
+      const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`);
+      const data = await response.json();
+      displaySongs(data.data);
+    } catch (error) {
+      console.error("Errore nel recupero dati:", error);
+      resultsContainer.innerHTML = "<p class='text-danger'>Errore nel caricamento dei dati.</p>";
     }
-  
-    function updateSongs(songs, sectionId) {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.innerHTML = ""; // Pulisce la sezione
-        songs.slice(0, 4).forEach(song => {
-          console.log("Aggiungo canzone:", song); // Log per debug
-          const songCard = document.createElement("div");
-          songCard.classList.add("col", "mb-4");
-          songCard.innerHTML = `
-            <div class="card h-100">
-              <img src="${song.album.cover_medium}" class="card-img-top" alt="${song.title}">
-              <div class="card-body">
-                <h5 class="card-title">${song.title}</h5>
-                <p class="card-text">${song.artist.name}</p>
-                <a href="${song.link}" class="btn btn-primary" target="_blank">Ascolta</a>
-              </div>
-            </div>
-          `;
-          section.appendChild(songCard);
-        });
-      } else {
-        console.warn(`Sezione ${sectionId} non trovata nell'HTML.`);
-      }
+  };
+
+  // Funzione per mostrare le canzoni
+  const displaySongs = (songs) => {
+    if (songs.length === 0) {
+      resultsContainer.innerHTML = "<p class='text-warning'>Nessun risultato trovato.</p>";
+      return;
     }
-  
-    // Effettua le chiamate API per ogni artista
-    fetchSongs("eminem", "eminemSection");
-    fetchSongs("metallica", "metallicaSection");
-    fetchSongs("queen", "queenSection");
+    
+    resultsContainer.innerHTML = songs.map(song => `
+      <div class="col mb-3">
+        <div class="card shadow-sm">
+          <img src="${song.album.cover_medium}" class="card-img-top" alt="${song.title}">
+          <div class="card-body">
+            <h5 class="card-title">${song.title}</h5>
+            <p class="card-text">${song.artist.name}</p>
+            <a href="${song.link}" target="_blank" class="btn btn-primary">Ascolta su Deezer</a>
+          </div>
+        </div>
+      </div>
+    `).join("");
+  };
+
+  // Event listener sul bottone di ricerca
+  searchButton.addEventListener("click", searchSongs);
+
+  // Permette la ricerca premendo "Enter"
+  searchField.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      searchSongs();
+    }
   });
+});
